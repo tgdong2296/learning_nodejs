@@ -1,6 +1,6 @@
 # Data Type
 
-**<u>Mọi thứ trong Javascript đều là object</u>**
+**Mọi thứ trong Javascript đều là object**
 
 ## Premitive data types (Kiểu dữ liệu nguyên thủy)
 
