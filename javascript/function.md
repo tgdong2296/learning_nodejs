@@ -149,3 +149,40 @@ const square = n => {
 
 const square = n => n * n
 ```
+
+# High order function
+
+- High order function là các function nhận một function khác như một parameter hoặc return một function khác như một output value.
+- Function được truyền vào mọt function khác như một parameter được gọi là callBack.
+
+## Callback
+
+```javascript
+// a callback function, the name of the function could be any name
+const callback = (n) => {
+  return n ** 2
+}
+​
+// function that takes other function as a callback
+function cube(callback, n) {
+  return callback(n) * n
+}
+​
+console.log(cube(callback, 3))
+```
+
+## Returning function
+
+```javascript
+// Higher order function returning an other function
+const higherOrder = n => {
+  const doSomething = m => {
+    const doWhatEver = t => {
+      return 2 * n + 3 * m + t
+    }
+    return doWhatEver
+  }
+  return doSomething
+}
+console.log(higherOrder(2)(3)(10))
+```

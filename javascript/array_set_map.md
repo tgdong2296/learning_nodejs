@@ -110,3 +110,102 @@ const arr = [
     const numbers = [1, 2, 3, 4, 5]
     numbers.reverse()
     ```
+
+# Set
+
+- Set là tập hợp các element.
+- Các element trong Set không được giống nhau.
+
+## Create empty Set
+
+```javascript
+const companies = new Set()
+console.log(companies) // Set(0) {}
+```
+
+## Create Set from Array
+
+```javascript
+const languages = [
+  'English',
+  'Finnish',
+  'English',
+  'French',
+  'Spanish',
+  'English',
+  'French',
+]
+
+const setOfLanguages = new Set(languages)
+console.log(setOfLanguages) // Set(4) {"English", "Finnish", "French", "Spanish"}
+```
+
+## Add / Delete / Clear element
+
+```javascript
+const companies = new Set()
+
+companies.add('Google') // add new
+
+companies.delete('Google') // remove element
+
+companies.clear() // delete all element
+```
+
+## Check element
+
+```javascript
+companies.has('Apple') // false
+```
+
+# Map
+
+- Map là cấu trúc dữ liệu theo dạng Key/Value
+
+## Create empty Map
+
+```javascript
+const map = new Map()
+console.log(map) // Map(0) {}
+```
+
+## Create Map from Array
+
+```javascript
+countries = [
+  ['Finland', 'Helsinki'],
+  ['Sweden', 'Stockholm'],
+  ['Norway', 'Oslo'],
+]
+const map = new Map(countries)
+console.log(map) // Map(3) {"Finland" => "Helsinki", "Sweden" => "Stockholm", "Norway" => "Oslo"}
+```
+
+## Add / Delete / Clear value to Map
+
+```javascript
+const countriesMap = new Map()
+countriesMap.set('Finland', 'Helsinki') // add
+
+countriesMap.delete('Finland') // delete
+
+countriesMap.clear() // delete all
+```
+
+## Check Key in Map
+
+```javascript
+countriesMap.has('Finland') // return true/false
+```
+
+## Get all Key/Value by loop
+
+```javascript
+for (const element of countriesMap) {
+  console.log(element)
+}
+// OR
+for (const [country, city] of countriesMap){
+ console.log(country, city)
+}
+```
